@@ -1,10 +1,15 @@
+const repoUrl = "https://github.com/battelren/password-generator"
+
 const Footer: React.FC = () => {
   return (
     <div className="flex justify-center mt-10">
       <p className="text-gray-500 text-sm font-medium">
-        開発環境: React, TypeScript, HeroIcons
+        <span className="font-bold">開発環境:</span> React, TypeScript, HeroIcons
         <br />
-        GitHub: <a href="http://www.xxx.yyy">http://www.xxx.yyy</a>
+        <span className="font-bold">GitHub:</span>
+        <a href={repoUrl} target="_blank" rel="noopener noreferrer">
+          {repoUrl}
+        </a>
       </p>
     </div>
   )
