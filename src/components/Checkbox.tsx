@@ -8,22 +8,21 @@ type CheckboxProps = {
 
 function Checkbox(props: CheckboxProps) {
   const { text, state, setState } = props
+  const inputId = `${text}-checkbox`
 
   return (
-    <label className="flex flex-row gap-x-[0.5rem] items-center select-none">
+    <label htmlFor={inputId} className="flex flex-row gap-x-[0.5rem] items-center select-none">
       <input
+        id={inputId}
         type="checkbox"
         className="h-[1.5rem] w-[1.5rem] text-indigo-600"
         checked={state}
         onChange={(e) => {
           setState(e.target.checked)
-          e.stopPropagation()
-          e.preventDefault()
         }}
       />
       <span className="text-gray-700 text-[1.2rem]">{text}</span>
     </label>
   )
 }
-
 export { Checkbox }
