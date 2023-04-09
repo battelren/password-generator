@@ -13,7 +13,14 @@ function Checkbox(props: CheckboxProps) {
   const icon = isChecked ? <CheckIcon className="h-[1.2rem] w-[1.2rem] text-white stroke-[0.32rem]" /> : null
 
   return (
-    <div className="flex flex-row gap-x-[0.4rem] items-center" onClick={() => setIsChecked(!isChecked)}>
+    <div
+      className="flex flex-row gap-x-[0.4rem] items-center"
+      onClick={(e) => {
+        setIsChecked(!isChecked)
+        e.preventDefault()
+        e.stopPropagation()
+      }}
+    >
       <div className={`${border} ${bgColor} w-[1.5rem] h-[1.5rem] rounded-md flex flex-row gap-x-[0.3rem] items-center justify-center cursor-pointer`}>
         {icon}
       </div>
