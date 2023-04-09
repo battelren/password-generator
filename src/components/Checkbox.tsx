@@ -15,7 +15,12 @@ function Checkbox(props: CheckboxProps) {
   return (
     <div
       className="flex flex-row gap-x-[0.4rem] items-center"
-      onClick={(e) => {
+      onTouchEnd={(e) => {
+        setIsChecked(!isChecked)
+        e.preventDefault()
+        e.stopPropagation()
+      }}
+      onMouseUp={(e) => {
         setIsChecked(!isChecked)
         e.preventDefault()
         e.stopPropagation()
