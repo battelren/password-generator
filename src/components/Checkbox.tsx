@@ -14,7 +14,7 @@ function Checkbox(props: CheckboxProps) {
 
   return (
     <div
-      className="flex flex-row gap-x-[0.4rem] items-center"
+      className="h-[3rem] flex flex-row gap-x-[0.4rem] items-center"
       onTouchEnd={(e) => {
         setIsChecked(!isChecked)
         e.preventDefault()

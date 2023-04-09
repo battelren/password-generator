@@ -53,7 +53,7 @@ const PasswordGenerator: React.FC = () => {
         />
       </div>
 
-      <div className="grid grid-rows-3 grid-flow-col gap-y-[1rem] mx-[3rem]">
+      <div className="grid grid-rows-3 grid-flow-col mx-[3rem]">
         <div className="col-span-2 flex flex-row items-center gap-x-[0.5rem]">
           <label htmlFor="password-length" className="block text-[1.2rem] whitespace-nowrap w-[8rem]">
             桁数：{passwordLength}
