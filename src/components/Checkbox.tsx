@@ -13,7 +13,7 @@ function Checkbox(props: CheckboxProps) {
     <label className="flex flex-row gap-x-[0.5rem] items-center select-none">
       <input
         type="checkbox"
-        className="h-[1rem] w-[1rem] text-indigo-600"
+        className="h-[1.2rem] w-[1.2rem] text-indigo-600"
         checked={state}
         onChange={(e) => {
           setState(e.target.checked)
