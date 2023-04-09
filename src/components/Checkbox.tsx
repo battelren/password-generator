@@ -11,7 +11,15 @@ function Checkbox(props: CheckboxProps) {
 
   return (
     <label className="flex flex-row gap-x-[0.5rem] items-center select-none">
-      <input type="checkbox" className="h-[1rem] w-[1rem] text-indigo-600" checked={state} onChange={(e) => setState(e.target.checked)} />
+      <input
+        type="checkbox"
+        className="h-[1rem] w-[1rem] text-indigo-600"
+        checked={state}
+        onChange={(e) => {
+          setState(e.target.checked)
+          e.preventDefault()
+        }}
+      />
       <span className="text-gray-700">{text}</span>
     </label>
   )
