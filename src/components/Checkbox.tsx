@@ -17,8 +17,8 @@ function Checkbox(props: CheckboxProps) {
         checked={state}
         onChange={(e) => {
           setState(e.target.checked)
-          e.preventDefault()
         }}
+        onClick={(e) => e.preventDefault()}
       />
       <span className="text-gray-700 text-[1.2rem]">{text}</span>
     </label>
