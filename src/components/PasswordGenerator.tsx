@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { Checkbox } from "./Checkbox"
 import { getRandomPassword } from "../utils/RandomPassword"
 import { ArrowPathIcon, Square2StackIcon, CheckIcon } from "@heroicons/react/24/outline"
+import { Slider } from "./Slider"
 
 const MIN_PASSWORD_LENGTH = 4
 const MAX_PASSWORD_LENGTH = 32
@@ -59,13 +60,14 @@ const PasswordGenerator: React.FC = () => {
           <label htmlFor="password-length" className="block text-[1.2rem] whitespace-nowrap w-[8rem]">
             桁数：{passwordLength}
           </label>
-          <input
-            type="range"
+          <Slider
+            trackClassName="h-[0.5rem] w-full bg-gray-300 rounded-lg"
+            thumbClassName="outline-none h-[1.5rem] w-[1.5rem] bg-gray-600 rounded-full"
             min={MIN_PASSWORD_LENGTH}
             max={MAX_PASSWORD_LENGTH}
+            step={1}
             value={passwordLength}
-            onChange={(e) => setPasswordLength(parseInt(e.target.value))}
-            className="w-full"
+            onChange={(newValue) => setPasswordLength(newValue)}
           />
         </div>
 
