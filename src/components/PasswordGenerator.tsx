@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react"
-import { Checkbox } from "./Checkbox"
 import { getRandomPassword } from "../utils/RandomPassword"
 import { ArrowPathIcon, Square2StackIcon, CheckIcon } from "@heroicons/react/24/outline"
 import { Slider } from "./Slider"
+import { Checkbox } from "./Checkbox"
 
 const MIN_PASSWORD_LENGTH = 4
 const MAX_PASSWORD_LENGTH = 32
@@ -69,10 +69,10 @@ const PasswordGenerator: React.FC = () => {
           />
         </div>
 
-        <Checkbox text="英小文字" state={includeLowercase} setState={setIncludeLowercase} />
-        <Checkbox text="英大文字" state={includeUppercase} setState={setIncludeUppercase} />
-        <Checkbox text="数字" state={includeNumbers} setState={setIncludeNumbers} />
-        <Checkbox text="記号" state={includeSymbols} setState={setIncludeSymbols} />
+        <Checkbox text="英小文字" isChecked={includeLowercase} setIsChecked={setIncludeLowercase} />
+        <Checkbox text="英大文字" isChecked={includeUppercase} setIsChecked={setIncludeUppercase} />
+        <Checkbox text="数字" isChecked={includeNumbers} setIsChecked={setIncludeNumbers} />
+        <Checkbox text="記号" isChecked={includeSymbols} setIsChecked={setIncludeSymbols} />
       </div>
 
       <div className="flex flex-row gap-x-[0.5rem] mt-[0.8rem]">
