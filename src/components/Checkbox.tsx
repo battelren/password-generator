@@ -18,6 +18,7 @@ function Checkbox(props: CheckboxProps) {
         onChange={(e) => {
           setState(e.target.checked)
           e.stopPropagation()
+          e.preventDefault()
         }}
       />
       <span className="text-gray-700 text-[1.2rem]">{text}</span>
