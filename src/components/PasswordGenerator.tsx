@@ -51,7 +51,7 @@ const PasswordGenerator: React.FC = () => {
           value={password}
           ref={passwordRef}
           onChange={(e) => setPassword(e.target.value)}
-          className="outline-none w-full border border-gray-400 py-2 px-4 rounded text-center"
+          className="select-auto outline-none w-full border border-gray-400 py-2 px-4 rounded text-center"
         />
       </div>
 
