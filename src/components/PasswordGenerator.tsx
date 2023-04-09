@@ -62,7 +62,7 @@ const PasswordGenerator: React.FC = () => {
           </label>
           <Slider
             trackClassName="h-[1rem] w-full bg-gray-300 rounded-lg"
-            thumbClassName="outline-none h-[1.5rem] w-[1.5rem] bg-gray-600 rounded-full"
+            thumbClassName="outline-none h-[2rem] w-[2rem] bg-gray-600 rounded-full"
             min={MIN_PASSWORD_LENGTH}
             max={MAX_PASSWORD_LENGTH}
             step={1}
