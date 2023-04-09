@@ -39,7 +39,7 @@ const PasswordGenerator: React.FC = () => {
   }, [password])
 
   return (
-    <div className=" flex flex-col p-[1rem] gap-y-[0.5rem]">
+    <div className=" flex flex-col gap-y-[0.5rem]">
       <div className="mb-[0.8rem]">
         <label htmlFor="password" className="block font-medium mb-[1rem] text-[2rem] text-center">
           パスワード生成
