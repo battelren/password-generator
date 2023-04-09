@@ -41,7 +41,7 @@ const PasswordGenerator: React.FC = () => {
   return (
     <div className=" flex flex-col p-[1rem] gap-y-[0.5rem]">
       <div className="mb-[0.8rem]">
-        <label htmlFor="password" className="block font-medium mb-[1rem] text-[1.8rem] text-center">
+        <label htmlFor="password" className="block font-medium mb-[1rem] text-[2rem] text-center">
           パスワード生成
         </label>
         <input
@@ -51,7 +51,7 @@ const PasswordGenerator: React.FC = () => {
           value={password}
           ref={passwordRef}
           onChange={(e) => setPassword(e.target.value)}
-          className="select-auto outline-none w-full border border-gray-400 py-2 px-4 rounded text-center"
+          className="select-auto outline-none w-full text-[1.2rem] border border-gray-400 py-2 px-4 rounded text-center"
         />
       </div>
 
