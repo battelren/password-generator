@@ -38,6 +38,8 @@ const PasswordGenerator: React.FC = () => {
     setIsPasswordCopied(() => false)
   }, [password])
 
+  const checkedIcon = <CheckIcon className="h-[1.2rem] w-[1.2rem] text-white stroke-[0.32rem]" />
+
   return (
     <div className=" flex flex-col gap-y-[0.5rem]">
       <div className="mb-[0.8rem]">
@@ -69,10 +71,42 @@ const PasswordGenerator: React.FC = () => {
           />
         </div>
 
-        <Checkbox text="英小文字" isChecked={includeLowercase} setIsChecked={setIncludeLowercase} />
-        <Checkbox text="英大文字" isChecked={includeUppercase} setIsChecked={setIncludeUppercase} />
-        <Checkbox text="数字" isChecked={includeNumbers} setIsChecked={setIncludeNumbers} />
-        <Checkbox text="記号" isChecked={includeSymbols} setIsChecked={setIncludeSymbols} />
+        <Checkbox
+          text="英小文字"
+          isChecked={includeLowercase}
+          setIsChecked={setIncludeLowercase}
+          checkedBoxClassName="checkedbox"
+          uncheckedBoxClassName="uncheckedbox"
+          checkedIcon={checkedIcon}
+          textClassName="text-gray-700 text-[1.2rem]"
+        />
+        <Checkbox
+          text="英大文字"
+          isChecked={includeUppercase}
+          setIsChecked={setIncludeUppercase}
+          checkedBoxClassName="checkedbox"
+          uncheckedBoxClassName="uncheckedbox"
+          checkedIcon={checkedIcon}
+          textClassName="text-gray-700 text-[1.2rem]"
+        />
+        <Checkbox
+          text="数字"
+          isChecked={includeNumbers}
+          setIsChecked={setIncludeNumbers}
+          checkedBoxClassName="checkedbox"
+          uncheckedBoxClassName="uncheckedbox"
+          checkedIcon={checkedIcon}
+          textClassName="text-gray-700 text-[1.2rem]"
+        />
+        <Checkbox
+          text="記号"
+          isChecked={includeSymbols}
+          setIsChecked={setIncludeSymbols}
+          checkedBoxClassName="checkedbox"
+          uncheckedBoxClassName="uncheckedbox"
+          checkedIcon={checkedIcon}
+          textClassName="text-gray-700 text-[1.2rem]"
+        />
       </div>
 
       <div className="flex flex-row gap-x-[0.5rem] mt-[0.8rem]">

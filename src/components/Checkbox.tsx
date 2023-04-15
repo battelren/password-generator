@@ -1,5 +1,4 @@
 import { ReactNode } from "react"
-import { CheckIcon } from "@heroicons/react/24/outline"
 
 type CheckboxProps = {
   text: string
@@ -7,8 +6,8 @@ type CheckboxProps = {
   setIsChecked: (value: React.SetStateAction<boolean>) => void
   containerClassName?: string
   checkedBoxClassName?: string
-  textClassName?: string
   uncheckedBoxClassName?: string
+  textClassName?: string
   checkedIcon?: ReactNode
 }
 
@@ -31,9 +30,7 @@ function Checkbox(props: CheckboxProps) {
       }}
     >
       {isChecked ? (
-        <div className={checkedBoxClassName ?? `bg-indigo-500 ${containerBaseClassName}`}>
-          <CheckIcon className="h-[1.2rem] w-[1.2rem] text-white stroke-[0.32rem]" />
-        </div>
+        <div className={checkedBoxClassName ?? `bg-indigo-500 ${containerBaseClassName}`}>{checkedIcon}</div>
       ) : (
         <div className={uncheckedBoxClassName ?? `border border-gray-400 ${containerBaseClassName}`}></div>
       )}
