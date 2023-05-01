@@ -8,7 +8,7 @@ const MIN_PASSWORD_LENGTH = 1
 const MAX_PASSWORD_LENGTH = 64
 
 const PasswordGenerator: React.FC = () => {
-  const [passwordLength, setPasswordLength] = useState<number>(12)
+  const [passwordLength, setPasswordLength] = useState<number>(8)
   const [includeLowercase, setIncludeLowercase] = useState<boolean>(true)
   const [includeUppercase, setIncludeUppercase] = useState<boolean>(true)
   const [includeNumbers, setIncludeNumbers] = useState<boolean>(true)
@@ -17,8 +17,6 @@ const PasswordGenerator: React.FC = () => {
 
   const [isPasswordEmpty, setIsPasswordEmpty] = useState<boolean>(true)
   const [isPasswordCopied, setIsPasswordCopied] = useState<boolean>(false)
-
-  const passwordRef = useRef<HTMLInputElement>(null)
 
   function generatePassword() {
     setPassword(() => getRandomPassword({ passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSymbols }))
@@ -44,15 +42,9 @@ const PasswordGenerator: React.FC = () => {
     <div className=" flex flex-col gap-y-[0.5rem]">
       <div className="mb-[0.8rem]">
         <label className="block font-medium mb-[1rem] text-[2rem] text-center">パスワード生成</label>
-        <input
-          type="text"
-          name="password"
-          id="password"
-          value={password}
-          ref={passwordRef}
-          onChange={(e) => setPassword(e.target.value)}
-          className="select-auto outline-none w-full text-[1.2rem] border border-gray-400 py-2 px-4 rounded text-center"
-        />
+        <div className="text-[1.2rem] h-[6rem] px-[0.5rem] border border-gray-400 rounded w-full break-all flex flex-row items-center justify-center text-center">
+          {password}
+        </div>
       </div>
 
       <div className="grid grid-rows-3 grid-flow-col h-[9rem] w-[18rem] mx-auto">
