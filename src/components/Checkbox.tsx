@@ -11,6 +11,8 @@ type CheckboxProps = {
   checkedIcon?: ReactNode
 }
 
+// Checkboxを素早くタップすると誤動作する場合の対策として
+// onClickではなく、onTouchEnd,onMouseUpを使用
 function Checkbox(props: CheckboxProps) {
   const { text, isChecked, setIsChecked, containerClassName, checkedBoxClassName, textClassName, uncheckedBoxClassName, checkedIcon } = props
   const containerBaseClassName = "w-[1.5rem] h-[1.5rem] rounded-md flex flex-row gap-x-[0.3rem] items-center justify-center cursor-pointer"
