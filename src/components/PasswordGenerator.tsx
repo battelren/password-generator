@@ -4,8 +4,8 @@ import { ArrowPathIcon, Square2StackIcon, CheckIcon } from "@heroicons/react/24/
 import { Slider } from "./Slider"
 import { Checkbox } from "./Checkbox"
 
-const MIN_PASSWORD_LENGTH = 4
-const MAX_PASSWORD_LENGTH = 32
+const MIN_PASSWORD_LENGTH = 1
+const MAX_PASSWORD_LENGTH = 64
 
 const PasswordGenerator: React.FC = () => {
   const [passwordLength, setPasswordLength] = useState<number>(12)
