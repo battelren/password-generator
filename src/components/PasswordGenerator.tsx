@@ -39,9 +39,9 @@ const PasswordGenerator: React.FC = () => {
   const checkedIcon = <CheckIcon className="h-[1.2rem] w-[1.2rem] text-white stroke-[0.32rem]" />
 
   return (
-    <div className=" flex flex-col gap-y-[0.5rem]">
-      <div className="mb-[0.8rem]">
-        <label className="block font-medium mb-[1rem] text-[2rem] text-center">パスワード生成</label>
+    <div className="flex flex-col gap-y-[0.8rem]">
+      <label className="block font-medium text-[2rem] text-center">パスワード生成</label>
+      <div>
         <div className="text-[1.2rem] h-[6rem] px-[0.5rem] border border-gray-400 rounded w-full break-all flex flex-row items-center justify-center text-center">
           {password}
         </div>
@@ -101,7 +101,7 @@ const PasswordGenerator: React.FC = () => {
         />
       </div>
 
-      <div className="flex flex-row gap-x-[0.5rem] mt-[0.8rem]">
+      <div className="flex flex-row gap-x-[0.5rem] mt-[0.2rem]">
         <button className="button w-[50%]" onClick={() => copyPassword()} disabled={isPasswordEmpty || isPasswordCopied}>
           {isPasswordCopied ? (
             <>
